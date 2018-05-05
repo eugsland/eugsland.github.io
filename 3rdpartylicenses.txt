@@ -812,6 +812,10 @@ MIT
 MIT
 MIT
 
+@angular/router@5.2.9
+MIT
+MIT
+
 protractor@5.1.2
 MIT
 The MIT License
