@@ -1,33 +1,18 @@
-<div class="container">
+<div class="u-maxWidth640 u-marginAuto" style="margin-bottom: 50vh">
   <div id = "blog">
     <div class="secTitle">
       <h1 style="text-align: center;">Blog: Stories and Tales</h1>
     </div>
 
     <ul>
-      <div *ngFor="let entry of rssParsed.feed.entries" class="secBody">
-          <img src = "https://thumbs.gfycat.com/ZanyAngelicHusky-max-1mb.gif"  />
-          <div class = "text">
-              <h2>{{entry.title}}</h2>
-              <h5>{{entry.pubDate}}</h5>
-              <p> {{entry.content}}  </p>
+      <div *ngFor="let entry of entries" class="secBody" style="margin:5px; min-height:0px;">
+          <a href="{{entry.link}}">
+          <div class="text">
+              <h3>{{entry.title}}</h3>
           </div>
+          </a>
       </div>
     </ul>
   </div>
 </div>
 
-<!--
-interface RSSEntry {
-  title: string;
-  link: string;
-  pubDate: string;
-  creator: string;
-  content: string;
-  contentSnippet: string;
-  guid: string;
-  categories: string[];
-  isoDate: string;
-}
-
--->

@@ -5,13 +5,17 @@
   </div>
 
   <ul>
-    <div *ngFor="let content of contentObs | async" class="secBody">
-        <img [src] = "getPic(content.imgurl)"  />
-        <div class = "text">
-            <h2>{{content.title}}</h2>
-            <h5>{{content.location}}</h5>
-            <p> {{content.desc}}    </p>
+    <div *ngFor="let content of contentObs | async" >
+      <a href="{{content.link}}">
+        <div class="secBody">
+            <img [src] = "getPic(content.imgurl)"  />
+            <div class = "text">
+                <h2>{{content.title}}</h2>
+                <h5>{{content.location}}</h5>
+                <p> {{content.desc}}    </p>
+            </div>
         </div>
+      </a>
     </div>
   </ul>
 </div>

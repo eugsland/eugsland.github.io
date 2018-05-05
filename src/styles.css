@@ -303,6 +303,14 @@ width: 100%;
       margin-left: 0.01px;
       margin-right: 0.01px;
   }
+  ul.banner-social-buttons li.inliner {
+    display: block;
+    border: 0px;
+    margin: 0px;
+    margin-top: 0px;
+    width: 80%;
+    padding: 0px;
+  }
 
   .text h2{
       text-align: center;

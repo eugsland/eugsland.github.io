@@ -5,8 +5,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { RSSParserService } from './rss/rss-parser.service';
+import { Ng2PageScrollModule } from './ng2-page-scroll'
 
 import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
@@ -24,6 +24,7 @@ import { BlogComponent } from './blog/blog.component';
   ],
   imports: [
     BrowserModule,
+    Ng2PageScrollModule,
     AngularFireModule.initializeApp(keys.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
