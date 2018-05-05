@@ -1,0 +1,15 @@
+<div id = "projects">
+  <div class="secTitle">
+    <h1 style="text-align: center;">Experience</h1>
+  </div>
+
+  <ul>
+    <div *ngFor="let content of contentObs | async" class="secBody">
+        <img [src] = "getPic(content.title)"  />
+        <div class = "text">
+            <h2>{{content.title}}</h2>
+            <p> {{content.description}}    </p>
+        </div>
+    </div>
+  </ul>
+</div>
