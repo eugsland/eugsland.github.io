@@ -1,19 +1,10 @@
 <div class="container">
   <div id = "blog">
     <div class="secTitle">
-      <h1 style="text-align: center;">Blog</h1>
+      <h1 style="text-align: center;">Blog: Stories and </h1>
     </div>
 
-    <ul>
-      <div *ngFor="let content of contentObs | async" class="secBody">
-          <img [src] = "getPic(content.imgurl)"  />
-          <div class = "text">
-              <h2>{{content.title}}</h2>
-              <h5>{{content.location}}</h5>
-              <p> {{content.desc}}    </p>
-          </div>
-      </div>
-    </ul>
+
   </div>
 </div>
 
