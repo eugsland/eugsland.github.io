@@ -1,10 +1,33 @@
 <div class="container">
   <div id = "blog">
     <div class="secTitle">
-      <h1 style="text-align: center;">Blog: Stories and </h1>
+      <h1 style="text-align: center;">Blog: Stories and Tales</h1>
     </div>
 
-
+    <ul>
+      <div *ngFor="let entry of rssParsed.feed.entries" class="secBody">
+          <img src = "https://thumbs.gfycat.com/ZanyAngelicHusky-max-1mb.gif"  />
+          <div class = "text">
+              <h2>{{entry.title}}</h2>
+              <h5>{{entry.pubDate}}</h5>
+              <p> {{entry.content}}  </p>
+          </div>
+      </div>
+    </ul>
   </div>
 </div>
 
+<!--
+interface RSSEntry {
+  title: string;
+  link: string;
+  pubDate: string;
+  creator: string;
+  content: string;
+  contentSnippet: string;
+  guid: string;
+  categories: string[];
+  isoDate: string;
+}
+
+-->
