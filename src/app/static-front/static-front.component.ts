@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { keys } from '../../environments/keys';
 
 @Component({
   selector: 'app-static-front',
@@ -12,4 +13,7 @@ export class StaticFrontComponent implements OnInit {
   ngOnInit() {
   }
 
+  getlink(a){
+    return (keys.me[a])
+  }
 }

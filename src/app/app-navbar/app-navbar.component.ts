@@ -1,3 +1,4 @@
+import { keys } from './../../environments/keys';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,11 @@ export class AppNavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  getlink(a){
+    return (keys.me[a])
   }
 
 }
