@@ -62,7 +62,7 @@ var PageScrollConfig = (function () {
      * May be overridden using the page-scroll-duration attribute on a single ng2PageScroll instance.
      * @type {number}
      */
-    PageScrollConfig.defaultDuration = 1250;
+    PageScrollConfig.defaultDuration = 150;
     /**
      * The distance in pixels above scroll target where the animation should stop. Setting a positive number results in
      * the scroll target being more in the middle of the screen, negative numbers will produce scrolling "too far"

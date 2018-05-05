@@ -13,7 +13,6 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { StaticFrontComponent } from './static-front/static-front.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
