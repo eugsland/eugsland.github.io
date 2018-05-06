@@ -11,7 +11,8 @@
             <img [src] = "getPic(content.imgurl)"  />
             <div class = "text">
                 <h3>{{content.title}}</h3>
-                <h6>{{content.location}}</h6>
+                <h6 style="display: inline; "> <b>{{content.location}}</b></h6>
+                <h6 style=" float: right;"><i>{{content.duration}}</i></h6>
                 <p> {{content.desc}}    </p>
             </div>
         </div>
