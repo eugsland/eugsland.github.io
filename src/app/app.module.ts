@@ -13,6 +13,8 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { StaticFrontComponent } from './static-front/static-front.component';
 import { BlogComponent } from './blog/blog.component';
+import { YoutubeComponent } from './youtube/youtube.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BlogComponent } from './blog/blog.component';
     AppNavbarComponent,
     ContentListComponent,
     StaticFrontComponent,
-    BlogComponent
+    BlogComponent,
+    YoutubeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

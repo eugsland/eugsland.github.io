@@ -89,7 +89,12 @@ padding-right: 0px;
 
 }
 .intro {
-background: url(http://eugenewang.me/img/beach.jpg) no-repeat bottom center scroll;
+background:
+linear-gradient(
+      to bottom,
+      rgba(251, 255, 0, 0.408),
+      rgba(255, 255, 255, 0.8)
+    ),url('../../assets/egg0.png') no-repeat bottom center scroll;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
