@@ -1,6 +1,6 @@
 #master {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
   background: #ffffff;
@@ -28,7 +28,7 @@ body {
 }
 
 section{
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 
@@ -94,7 +94,7 @@ div.hr {
 
 #toplevel h5 {
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 300;
     color: #999;
     margin: 0 0 8px;
 }
@@ -188,4 +188,30 @@ b {
 
 #topleve #prjects h2 {
   margin-bottom: 0px;
+}
+
+h2 a {
+  text-decoration: underline;
+}
+
+p a{
+  color: #666;
+  text-decoration: underline;
+
+}
+
+#header a {
+  color: #039be5;
+  text-decoration: none;
+}
+
+.icon {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
