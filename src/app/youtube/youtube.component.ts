@@ -27,7 +27,7 @@ export class YoutubeComponent implements OnInit {
 
     //Magical sorting
     return this.db.list(listPath).valueChanges().map((data) => {
-      function value(goo){
+      function value(goo) {
         return goo.d
       }
       data.sort((a, b) => {

@@ -5,7 +5,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RSSParserService } from 'rss-parser';
+import { RSSParserService } from './rss/rss-parser.service';
 import { Ng2PageScrollModule } from './ng2-page-scroll'
 
 import { AppComponent } from './app.component';
