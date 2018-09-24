@@ -23,7 +23,7 @@ declare module 'rss-parser' {
     isoDate: string;
   }
 
-  interface ParserCallback { (err: Error, parsed: RSSParsed): void }
+  type ParserCallback = (err: Error, parsed: RSSParsed) => void;
 
   function parseString(xml: string, callback: ParserCallback);
   function parseURL(url: string, callback: ParserCallback);

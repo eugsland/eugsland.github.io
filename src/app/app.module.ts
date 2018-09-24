@@ -5,7 +5,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RSSParserService } from './rss-service/rss-parser.service';
 import { PostService } from './backend/post.service';
 import { Ng2PageScrollModule } from './ng2-page-scroll';
 
@@ -18,6 +17,7 @@ import { YoutubeComponent } from './youtube/youtube.component';
 import { FooterComponent } from './footer/footer.component';
 import { MessageService } from './message/message.service';
 import {HttpClientModule} from '@angular/common/http';
+import {RSSParserService} from './rss-service/rss-parser.service';
 
 @NgModule({
   declarations: [

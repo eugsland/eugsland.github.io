@@ -1,4 +1,4 @@
-import { async } from '@angular/core/testing';
+
 import { Component, OnInit } from '@angular/core';
 import { RSSParserService } from '../rss-service/rss-parser.service';
 import { RSSParsed, RSSEntry, RSSFeed } from 'rss-parser';
@@ -19,12 +19,15 @@ export class BlogComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getRss()
+    this.getRss();
   }
 
   getRss() {
     this.rssParser.parseURL(CORS_PROXY + URL).subscribe(
-      (data)=> this.entries = data.feed.entries
-    )
+      (data) => {
+        console.log(data);
+        this.entries = data.feed.entries;
+      }
+    );
   }
 }
