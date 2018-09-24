@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
-import { Observable } from 'rxjs/Observable';
+import {Observable, Subscribable} from 'rxjs/Observable';
+import {PostService} from '../backend/post.service';
+import {post} from 'selenium-webdriver/http';
+import {Post} from '../post';
+import {Subscriber} from 'rxjs/Subscriber';
+import {a} from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-content-list',
@@ -12,28 +17,19 @@ import { Observable } from 'rxjs/Observable';
 
 
 export class ContentListComponent implements OnInit {
-  contentObs: Observable<any[]>;
+  posts: Post[];
 
-  constructor(
-    private db: AngularFireDatabase,
-    private fb: FirebaseApp
-  ) { }
-  ngOnInit() {
-    this.contentObs = this.getCourses('/test');
+  constructor(private postService: PostService ) {
+    this.posts = [];
   }
 
-  getCourses(listPath): Observable<any[]> {
+  ngOnInit() {
+    this.getPosts();
+  }
 
-    // Magical sorting
-    return this.db.list(listPath).valueChanges().map((data) => {
-      function value(goo) {
-        return goo.d;
-      }
-      data.sort((a, b) => {
-          return value(a) < value(b) ? 1 : -1;
-       });
-      return data;
-   });
+  getPosts(): void {
+    this.postService.getPostes()
+      .subscribe(posts => { for (const key in posts) { this.posts.push(posts[key]); }});
   }
 
 

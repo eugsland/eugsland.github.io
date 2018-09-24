@@ -4,13 +4,14 @@ import { Observable } from 'rxjs/Observable';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Post } from '../post';
 import { of } from 'rxjs/observable/of';
+import {MessageService} from '../message/message.service';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable()
-export class BackendServiceService {
+export class PostService {
   private postesUrl = 'https://eugenewangme.firebaseio.com/test.json';  // URL to web api
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
@@ -20,7 +21,7 @@ export class BackendServiceService {
   getPostes (): Observable<Post[]> {
     return this.http.get<Post[]>(this.postesUrl)
       .pipe(
-        tap(postes => this.log('fetched postes')),
+        tap(postes => console.log('fetched postes')),
         catchError(this.handleError('getPostes', []))
       );
   }
@@ -72,7 +73,8 @@ export class BackendServiceService {
     );
   }
 
-  /** DELETE: delete the post from the server */
+  /*
+   DELETE: delete the post from the server
   deletePost (post: Post | number): Observable<{}|Post> {
     const id = typeof post === 'number' ? post : post.id;
     const url = `${this.postesUrl}/${id}`;
@@ -83,13 +85,14 @@ export class BackendServiceService {
     );
   }
 
-  /** PUT: update the post on the server */
+   PUT: update the post on the server
   updatePost (post: Post): Observable<any> {
     return this.http.put(this.postesUrl, post, httpOptions).pipe(
       tap(_ => this.log(`updated post id=${post.id}`)),
       catchError(this.handleError<any>('updatePost'))
     );
   }
+*/
 
   /**
    * Handle Http operation that failed.

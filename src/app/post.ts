@@ -1,5 +1,5 @@
 export class Post {
-  id: number;
+  d: number;
   desc: string;
   duration: string;
   imgurl: string;

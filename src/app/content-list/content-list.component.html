@@ -5,15 +5,15 @@
   </div>
 
   <ul>
-    <div *ngFor="let content of contentObs | async" >
-      <a href="{{content.link}}">
+    <div *ngFor="let post of posts " >
+      <a href="{{post.link}}">
         <div class="secBody">
-            <img [src] = "getPic(content.imgurl)"  />
+            <img [src] = "getPic(post.imgurl)"  />
             <div class = "text">
-                <h3>{{content.title}}</h3>
-                <h6 style="display: inline; "> <b>{{content.location}}</b></h6>
-                <h6 style=" float: right;"><i>{{content.duration}}</i></h6>
-                <p> {{content.desc}}    </p>
+                <h3>{{post.title}}</h3>
+                <h6 style="display: inline; "> <b>{{post.location}}</b></h6>
+                <h6 style=" float: right;"><i>{{post.duration}}</i></h6>
+                <p> {{post.desc}}    </p>
             </div>
         </div>
       </a>
