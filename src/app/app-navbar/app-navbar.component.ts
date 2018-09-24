@@ -15,7 +15,7 @@ export class AppNavbarComponent implements OnInit {
   }
 
   getlink(a){
-    return (keys.me[a])
+    return (keys.me[a]);
   }
 
 }

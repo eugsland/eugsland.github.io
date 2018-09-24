@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { parseString, parseFile, parseURL, RSSParsed } from 'rss-parser'
+import { parseString, parseFile, parseURL, RSSParsed } from 'rss-parser';
 
 @Injectable()
 export class RSSParserService {

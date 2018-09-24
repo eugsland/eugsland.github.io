@@ -1,6 +1,6 @@
 import { async } from '@angular/core/testing';
 import { Component, OnInit } from '@angular/core';
-import { RSSParserService } from '../rss/rss-parser.service';
+import { RSSParserService } from '../rss-service/rss-parser.service';
 import { RSSParsed, RSSEntry, RSSFeed } from 'rss-parser';
 import { Observable } from 'rxjs/Observable';
 

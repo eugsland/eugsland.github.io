@@ -1,6 +1,5 @@
-import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database'
+import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseApp } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
 
@@ -25,20 +24,20 @@ export class ContentListComponent implements OnInit {
 
   getCourses(listPath): Observable<any[]> {
 
-    //Magical sorting
+    // Magical sorting
     return this.db.list(listPath).valueChanges().map((data) => {
-      function value(goo){
-        return goo.d
+      function value(goo) {
+        return goo.d;
       }
       data.sort((a, b) => {
           return value(a) < value(b) ? 1 : -1;
        });
       return data;
-   });;
+   });
   }
 
 
-  getPic(picPath){
-    return 'https://firebasestorage.googleapis.com/v0/b/eugenewangme.appspot.com/o/'+ picPath + '?alt=media';
+  getPic(picPath) {
+    return 'https://firebasestorage.googleapis.com/v0/b/eugenewangme.appspot.com/o/' + picPath + '?alt=media';
   }
 }

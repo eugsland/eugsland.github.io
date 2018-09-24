@@ -1,4 +1,4 @@
-declare module "rss-parser" {
+declare module 'rss-parser' {
   interface RSSParsed {
     feed: RSSFeed;
   }
