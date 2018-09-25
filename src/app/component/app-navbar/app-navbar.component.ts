@@ -1,10 +1,9 @@
-import { keys } from './../../environments/keys';
+import { keys } from '../../../environments/keys';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-app-navbar',
-  templateUrl: './app-navbar.component.html',
-  styleUrls: ['./app-navbar.component.css']
+  templateUrl: './app-navbar.component.html'
 })
 export class AppNavbarComponent implements OnInit {
 

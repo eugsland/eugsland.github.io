@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {PostService} from '../backend/post.service';
-import {Post} from '../post';
+import {PostService} from '../../service/post/post.service';
+import {Post} from '../../post';
 
 @Component({
   selector: 'app-content-list',
-  templateUrl: './content-list.component.html',
-  styleUrls: ['./content-list.component.css']
+  templateUrl: './content-list.component.html'
 })
 
 
@@ -22,7 +21,7 @@ export class ContentListComponent implements OnInit {
 
   getPosts(): void {
     this.postService.getPostes()
-      .subscribe(posts => { for (const key in posts) { this.posts.push(posts[key]); }});
+      .subscribe(posts => this.posts = Object.values(posts));
   }
 
 

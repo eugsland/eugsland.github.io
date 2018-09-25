@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Post } from '../post';
+import { Post } from '../../post';
 import { of } from 'rxjs/observable/of';
-import {MessageService} from '../message/message.service';
+import {MessageService} from '../../message/message.service';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -68,7 +68,7 @@ export class PostService {
   /** POST: add a new post to the server */
   addPost (post: Post): Observable<{}|Post> {
     return this.http.post<Post>(this.postesUrl, post, httpOptions).pipe(
-      tap((post: Post) => this.log(`added post w/ id=${post.id}`)),
+      tap((post: Post) => this.log(`added post w/ id=${post.d}`)),
       catchError(this.handleError<Post>('addPost'))
     );
   }
