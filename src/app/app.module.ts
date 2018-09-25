@@ -15,6 +15,8 @@ import { MessageService } from './message/message.service';
 import {HttpClientModule} from '@angular/common/http';
 import {RSSParserService} from './service/rss-service/rss-parser.service';
 
+// https://github.com/cornflourblue/angular-6-registration-login-example
+
 @NgModule({
   declarations: [
     AppComponent,
