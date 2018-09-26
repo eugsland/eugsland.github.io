@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { keys } from '../../../environments/keys';
+import { Component } from '@angular/core';
+import { keys } from '../../environments/keys';
 
 @Component({
   selector: 'app-header',
