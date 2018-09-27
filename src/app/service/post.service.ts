@@ -5,6 +5,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Post } from '../post';
 import { of } from 'rxjs/observable/of';
 import {MessageService} from './message.service';
+import {keys} from '../../environments/keys';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -12,10 +13,9 @@ const httpOptions = {
 
 @Injectable()
 export class PostService {
-  private postesUrl = 'https://eugenewangme.firebaseio.com/test.json';  // URL to web api
-
-  constructor(private http: HttpClient, private messageService: MessageService) { }
-
+  private postesUrl = 'https://eugenewangme.firebaseio.com/test/exp.json';  // URL to web api
+  private dbset;
+  constructor(private http: HttpClient, private messageService: MessageService) {}
 
   /** GET postes from the server */
   getPostes (): Observable<Post[]> {

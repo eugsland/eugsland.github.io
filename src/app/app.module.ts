@@ -4,7 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent, AppNavbarComponent, ContentListComponent, HeaderComponent,
-  BlogComponent, YoutubeComponent, FooterComponent } from './component';
+  BlogComponent, YoutubeComponent, FooterComponent, ResumeComponent } from './component';
 import { PostService, MessageService, RSSParserService } from './service';
 
 // https://github.com/cornflourblue/angular-6-registration-login-example
@@ -17,7 +17,8 @@ import { PostService, MessageService, RSSParserService } from './service';
     HeaderComponent,
     BlogComponent,
     YoutubeComponent,
-    FooterComponent
+    FooterComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,3 +29,19 @@ import { PostService, MessageService, RSSParserService } from './service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// page 1
+//  Welcome
+//  project,
+//  video
+//  dev tools
+
+// Page 2
+//  interest dev
+//  other
+
+// Page 2:
+//  Job/Work
+//
+// page 3
+//  social: linkedin, github, insta, play
+//
