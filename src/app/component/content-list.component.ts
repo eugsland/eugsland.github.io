@@ -26,6 +26,6 @@ export class ContentListComponent implements OnInit {
 
 
   getPic(picPath) {
-    return 'https://firebasestorage.googleapis.com/v0/b/eugenewangme.appspot.com/o/' + picPath + '?alt=media';
+    return this.postService.getPicture(picPath);
   }
 }

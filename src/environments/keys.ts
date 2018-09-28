@@ -4,11 +4,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
-  keys
+  keys;
 }
 
 export const keys = {
-  apiUrl: 'https://eugenewangme.firebaseio.com/test/',
   me: {
     github: 'https://github.com/Kamagawa/',
     linkedin: "https://www.linkedin.com/in/eugeneywang",

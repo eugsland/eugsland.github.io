@@ -5,4 +5,5 @@ export * from './header.component';
 export * from './blog.component';
 export * from './youtube.component';
 export * from './footer.component';
-export * from './resume.component';
+export * from './p-main/p-main.component';
+export * from  './error/error.component';

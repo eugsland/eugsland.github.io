@@ -1,13 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent, AppNavbarComponent, ContentListComponent, HeaderComponent,
-  BlogComponent, YoutubeComponent, FooterComponent, ResumeComponent } from './component';
+import { AppComponent, AppNavbarComponent, ContentListComponent, HeaderComponent, BlogComponent, YoutubeComponent, FooterComponent, PMainComponent, ErrorComponent } from './component';
 import { PostService, MessageService, RSSParserService } from './service';
+import { RouterModule, Routes } from '@angular/router';
 
 // https://github.com/cornflourblue/angular-6-registration-login-example
+
+const appRoutes: Routes = [
+  { path: 'Interests', component: PMainComponent },
+  { path: 'Jobs',      component: PMainComponent },
+  { path: 'links', component: PMainComponent },
+  { path: '', component: PMainComponent },
+  { path: '**', component: ErrorComponent }
+];
 
 @NgModule({
   declarations: [
@@ -18,17 +25,22 @@ import { PostService, MessageService, RSSParserService } from './service';
     BlogComponent,
     YoutubeComponent,
     FooterComponent,
-    ResumeComponent
+    PMainComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule.forRoot()
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [RSSParserService, PostService, MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 // page 1
 //  Welcome
 //  project,
