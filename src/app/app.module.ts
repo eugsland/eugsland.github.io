@@ -9,11 +9,12 @@ import { RouterModule, Routes } from '@angular/router';
 // https://github.com/cornflourblue/angular-6-registration-login-example
 
 const appRoutes: Routes = [
-  { path: 'Interests', component: PMainComponent },
-  { path: 'Jobs',      component: PMainComponent },
+  { path: 'interests', component: PMainComponent },
+  { path: 'jobs',      component: PMainComponent },
   { path: 'links', component: PMainComponent },
   { path: '', component: PMainComponent },
-  { path: '**', component: ErrorComponent }
+  { path: '404', component: ErrorComponent },
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
